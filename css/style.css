@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --skin-color: #ec1839;
+}
+
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+body {
+  margin: 0;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Poppins" sans-serif;
+  background-color: var(--bg-black-100);
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Start project */
+
+.mode {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: var(--bg-black-50);
+  color: var(--text-black-900);
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.mainContainer {
+  width: 90%;
+  min-height: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-black-900);
+  text-align: center;
+  overflow: hidden;
+}
+h1 {
+  color: var(--text-black-900);
+}
+h3 {
+  color: var(--text-black-700);
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 16px;
+  height: 50px;
+  padding-left: 10px;
+  color: #302e4d;
+  transition: all 0.3s ease;
+}
+
+#title,
+#count,
+#category,
+#search {
+  flex: 0 0 100;
+  max-width: 100%;
+  width: 90%;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #302e4d;
+  transition: all 0.3s ease;
+}
+input:focus {
+  box-shadow: 0 0 20px var(--text-black-900);
+  z-index: 101;
+  transform: scale(1.05);
+}
+
+#price,
+#ads,
+#texas,
+#discount {
+  margin: 10px 10px;
+}
+small {
+  background-color: var(--skin-color);
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 8px 4px;
+}
+small::before {
+  content: "Total : ";
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#submit,
+#deletAll {
+  width: 80%;
+  height: 50px;
+  color: var(--bg-black-100);
+  border: none;
+  border-radius: 15px;
+  background-color: var(--skin-color);
+  color: white;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+/* SEARCH BUTTON */
+.search button {
+  flex: 0 0 50;
+  max-width: 50%;
+  width: 20%;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--skin-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+#searchByTitle {
+  float: left;
+  margin-left: 100px;
+}
+#searchByCategory {
+  float: right;
+  margin-right: 100px;
+}
+.search button:hover,
+#submit:hover,
+#deletAll:hover {
+  box-shadow: 0 0 20px var(--text-black-900);
+  letter-spacing: 2px;
+}
+table button:hover {
+  box-shadow: 0 0 20px var(--text-black-900);
+}
+/* PRODUCTS TABLE  */
+table {
+  margin: 20px auto;
+  width: 90%;
+  color: var(--text-black-700);
+  text-align: center;
+}
+table th {
+  color: var(--text-black-900);
+}
+th,
+td {
+  padding: 5px;
+}
+table button {
+  background-color: var(--skin-color);
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.errorMessage {
+  width: 300px;
+  position: fixed;
+  top: 10px;
+  left: 0px;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: var(--skin-color);
+  color: white;
+  display: none;
+  transition: all 0.3s ease;
+}
+.errorMessage .close {
+  position: absolute;
+  padding: 2px 8px;
+  top: 0;
+  right: 2;
+  border: 1px solid snow;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.errorMessage .close:hover {
+  background-color: white;
+  color: black;
+}

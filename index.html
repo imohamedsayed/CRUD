@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <div class="mainContainer">
+    <div class="mode"><i id="modeIcon" class="fas fa-moon"></i></div>
+    <h1>CRUDS</h1>
+    <h3>PRODUCT MANAGEMENT SYSTEM</h3>
+    <input type="text" name="Ptitle" id="title" placeholder="title" required />
+    <input
+      onkeyup="getTotal()"
+      type="number"
+      id="price"
+      placeholder="Price"
+      required
+    />
+    <input
+      onkeyup="getTotal()"
+      type="number"
+      id="texas"
+      placeholder="texas"
+      required
+    />
+    <input
+      onkeyup="getTotal()"
+      type="number"
+      id="ads"
+      placeholder="ads"
+      required
+    />
+    <input
+      onkeyup="getTotal()"
+      type="number"
+      id="discount"
+      placeholder="discount"
+      required
+    />
+    <small id="total"></small> <br />
+    <input type="number" id="count" placeholder="count" required />
+    <input type="text" id="category" placeholder="category" required /><br />
+    <button id="submit">CREATE</button>
+
+    <div class="search">
+      <input
+        onkeyup="searchData(this.value)"
+        type="text"
+        id="search"
+        placeholder="search"
+      /><br />
+      <button onclick="getSearchMode(this.id)" id="searchByTitle">
+        Search by title
+      </button>
+      <button onclick="getSearchMode(this.id)" id="searchByCategory">
+        Search by category
+      </button>
+    </div>
+    <br clear="both" /><br />
+    <button id="deletAll">DELETE ALL</button>
+    <table role="row">
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>PRICE</th>
+        <th>ADS</th>
+        <th>DISCOUNT</th>
+        <th>TOTAL</th>
+        <th>CATEGORY</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+      </tr>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="errorMessage" id="errorMessage">
+      You Should fill all input fields ..!
+      <div class="close" id="closeMessage">x</div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</html>
